@@ -70,7 +70,7 @@ class Database
         return $this->stmt->fetch(PDO::FETCH_ASSOC);
     }
 
-    public function rowCount()
+    public function hitung()
     {
         return $this->stmt->rowCount();
     }

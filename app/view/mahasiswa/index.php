@@ -1,5 +1,11 @@
 <div class="container mt-3">
 
+<div class="row">
+<div class="col-lg-6">
+<?php Flasher::flash(); ?>
+</div>
+</div>
+
     <div class="row">
         <div class="col-6">
             <!-- Button trigger modal -->
@@ -32,19 +38,19 @@
                 <form action="<?= BASEURL; ?>/mahasiswa/tambah" method="POST">
                     <div class="form-group">
                         <label for="nama">Nama</label>
-                        <input type="text" class="form-control" id="nama" name="nama">
+                        <input type="text" class="form-control" id="nama" name="nama" required>
                     </div>
                     <div class="form-group">
                         <label for="npm">NPM</label>
-                        <input type="number" class="form-control" id="npm" name="npm">
+                        <input type="number" class="form-control" id="npm" name="npm" required>
                     </div>
                     <div class="form-group">
                         <label for="email">Email</label>
-                        <input type="email" class="form-control" id="email" name="email">
+                        <input type="email" class="form-control" id="email" name="email" required>
                     </div>
                     <div class="form-group">
                         <label for="jurusan">Jurusan</label>
-                        <select class="form-control" id="jurusan" name="jurusan">
+                        <select class="form-control" id="jurusan" name="jurusan" required>
                             <option value="Sistem Informasi">Sistem Informasi</option>
                             <option value="Teknik Informatika">Teknik Informatika</option>
                             <option value="Akuntansi">Akuntansi</option>
