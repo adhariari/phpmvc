@@ -1,10 +1,10 @@
 <div class="container mt-3">
 
-<div class="row">
-<div class="col-lg-6">
-<?php Flasher::flash(); ?>
-</div>
-</div>
+    <div class="row">
+        <div class="col-lg-6">
+            <?php Flasher::flash(); ?>
+        </div>
+    </div>
 
     <div class="row">
         <div class="col-6">
@@ -15,8 +15,10 @@
             <h3>Daftar Mahasiswa</h3>
             <ul class="list-group">
                 <?php foreach ($data['mhs'] as $mhs) : ?>
-                    <li class="list-group-item d-flex justify-content-between align-items-center"><?= $mhs['nama']; ?>
-                        <a href="<?= BASEURL; ?>/mahasiswa/detail/<?= $mhs['id'] ?>" class="badge badge-primary">details</a></li>
+                    <li class="list-group-item "><?= $mhs['nama']; ?>
+                        <a href="<?= BASEURL; ?>/mahasiswa/hapus/<?= $mhs['id'] ?>" class="badge badge-danger float-right" onclick="return confirm('yakin dihapus?');">delete</a>
+                        <a href="<?= BASEURL; ?>/mahasiswa/detail/<?= $mhs['id'] ?>" class="badge badge-primary float-right mr-2">details</a>
+                    </li>
                 <?php endforeach; ?>
             </ul>
         </div>
