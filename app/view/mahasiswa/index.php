@@ -6,12 +6,31 @@
         </div>
     </div>
 
-    <div class="row">
-        <div class="col-6">
+    <div class="row mb-3">
+        <div class="col-lg-6">
             <!-- Button trigger modal -->
-            <button type="button" class="btn btn-primary mb-3 tombolTambahData" data-toggle="modal" data-target="#formModal">
+            <button type="button" class="btn btn-primary tombolTambahData" data-toggle="modal" data-target="#formModal">
                 Tambah Data Mahasiswa
             </button>
+        </div>
+    </div>
+
+    <div class="row mb-3">
+        <div class="col-lg-6">
+            <form action="<?= BASEURL; ?>/mahasiswa/cari" method="POST">
+                <div class="input-group">
+                    <input type="text" class="form-control" placeholder="Search.." name="keyword" id="keyword" autocomplete="off">
+                    <div class="input-group-append">
+                        <button class="btn btn-outline-primary" type="submit" id="tombolCari">Search</button>
+                        <a href="<?= BASEURL; ?>/mahasiswa" class="btn btn-outline-success" role="button">Back</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-6">
             <h3>Daftar Mahasiswa</h3>
             <ul class="list-group">
                 <?php foreach ($data['mhs'] as $mhs) : ?>
@@ -39,7 +58,7 @@
             <div class="modal-body">
 
                 <form action="<?= BASEURL; ?>/mahasiswa/tambah" method="POST">
-                <input type="hidden" name="id" id="id">
+                    <input type="hidden" name="id" id="id">
                     <div class="form-group">
                         <label for="nama">Nama</label>
                         <input type="text" class="form-control" id="nama" name="nama" required>

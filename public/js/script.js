@@ -35,8 +35,7 @@ $(function () {
                 $('#id').val(data.id);  
 
                 // console.log(data);
-                
-                              
+  
             }
             
         });
